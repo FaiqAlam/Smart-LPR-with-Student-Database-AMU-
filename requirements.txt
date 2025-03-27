@@ -1,0 +1,7 @@
+flask
+torch
+torchvision
+opencv-python-headless
+easyocr
+sqlite3
+ultralytics

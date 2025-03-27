@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Plate Detector</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.peakpx.com%2Fen%2Fhd-wallpaper-desktop-fyspf&psig=AOvVaw3jgD8YVQUgRBJeY_GwDEi-&ust=1734039510490000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCdg93WoIoDFQAAAAAdAAAAABAE') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* Top bar */
+        .top-bar {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6); /* Add transparency */
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border: 2px solid #fff;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .footer a {
+            color: #00f;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            color: #ff0;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        AMU License Plate Detection and Recognition Services
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Detection Results</h1>
+        <div class="result">
+            <h2>Uploaded Image:</h2>
+            <img src="{{ uploaded_image }}" alt="Uploaded Image">
+            {% if license_plate_image %}
+                <h2>Detected License Plate:</h2>
+                <img src="{{ license_plate_image }}" alt="Detected License Plate">
+            {% endif %}
+            {% if license_plate_text %}
+                <h2>License Plate Text:</h2>
+                <p>{{ license_plate_text }}</p>
+            {% endif %}
+            {% if student_info %}
+                <h2>Student Details:</h2>
+                <ul>
+                    <li>Name: {{ student_info[0] }}</li>
+                    <li>Enrollment No: {{ student_info[1] }}</li>
+                    <li>Hall: {{ student_info[2] }}</li>
+                    <li>Room No: {{ student_info[3] }}</li>
+                    <li>Department: {{ student_info[4] }}</li>
+                </ul>
+            {% else %}
+                <p class="message">{{ message }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            For Vehicle Information: <a href="https://parivahan.gov.in/parivahan//en/content/license-registration-details" target="_blank">Visit Vahan Website</a>
+        </div>
+    </div>
+</body>
+</html>
