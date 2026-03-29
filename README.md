@@ -1,5 +1,9 @@
 # 🚗 Smart License Plate Recognition with Student Verification  
 
+## 📌 Author
+Faiq Alam - Aligarh Muslim University 
+(Minor Project)
+
 ## 📌 Project Overview  
 
 This project is an advanced deep learning-based **License Plate Recognition (LPR) system** designed for automatic vehicle identification and student verification within **Aligarh Muslim University (AMU)**. Developed as part of a **Computer Engineering minor project**, the system detects vehicle license plates, extracts their numbers using **OCR (Optical Character Recognition)**, and verifies them against a **student database**.  
